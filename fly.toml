@@ -1,9 +1,19 @@
+app = "your-app-name"  # Fly.io dagi loyihangiz nomini shu yerga yozing
+
 [build]
-  builtin = "node"
+  dockerfile = "Dockerfile"  # Agar Dockerfile ishlatayotgan bo'lsangiz
 
 [env]
-  PORT = "8080"
+  PORT = "8080"  # Agar Node.js ilovasi ishlatsa, portni ko‘rsatish shart
 
 [[services]]
-  internal_port = 8080
+  internal_port = 8080  # Ilova ishlaydigan port
   protocol = "tcp"
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = 443
