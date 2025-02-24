@@ -1,4 +1,4 @@
-app = "your-app-name" # Fly.io dagi ilovangiz nomi
+app = "youe-ver" # Fly.io dagi ilovangiz nomi
 
 [build]
   dockerfile = "Dockerfile"
