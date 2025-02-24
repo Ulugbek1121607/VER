@@ -1,13 +1,13 @@
-app = "your-app-name"  # Fly.io dagi loyihangiz nomini shu yerga yozing
+app = "your-app-name" # Fly.io dagi ilovangiz nomi
 
 [build]
-  dockerfile = "Dockerfile"  # Agar Dockerfile ishlatayotgan bo'lsangiz
+  dockerfile = "Dockerfile"
 
 [env]
-  PORT = "8080"  # Agar Node.js ilovasi ishlatsa, portni ko‘rsatish shart
+  PORT = "8080"
 
 [[services]]
-  internal_port = 8080  # Ilova ishlaydigan port
+  internal_port = 8080
   protocol = "tcp"
 
   [[services.ports]]
